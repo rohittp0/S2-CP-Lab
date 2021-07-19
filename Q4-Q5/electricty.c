@@ -28,7 +28,7 @@ int main()
     charge += usage*3.5;
     charge = charge > 40 ? charge : 40 ;
     
-    printf("\nElectricty bill for consumer %d :\n",cNo);
+    printf("\nElectricity bill for consumer %d :\n",cNo);
 
     printf("-------------------\n");
     printf("| Charge  |  Tax  |\n");
