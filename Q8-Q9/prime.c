@@ -3,7 +3,7 @@
 
 int isPrime(int number, int previousPrimes[])
 {
-    for(int i = 0; previousPrimes[i] < sqrt(number); i++)
+    for(int i = 0; previousPrimes[i] < (int) sqrt(number) + 1; i++)
         if(number % previousPrimes[i] == 0)
             return 0;
 
