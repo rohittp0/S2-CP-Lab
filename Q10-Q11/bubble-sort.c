@@ -27,8 +27,8 @@ int main()
         sum += students[i];  
     }
 
-    float median = NUM_STUDENTS % 2 ? (students[NUM_STUDENTS/2 + 1] + students[NUM_STUDENTS/2])/2 
-                    : students[NUM_STUDENTS/2 + 1];
+    float median = NUM_STUDENTS % 2 ? students[NUM_STUDENTS/2] 
+                    : (students[NUM_STUDENTS/2] + students[NUM_STUDENTS/2 -1])/2;
 
     printf("Maximum = %d \t Minimum = %d \t",students[NUM_STUDENTS-1],students[0]);
     printf("Mean = %f \t",1.0*sum/NUM_STUDENTS);
