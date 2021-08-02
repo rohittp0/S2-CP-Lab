@@ -43,7 +43,7 @@ int addMatrix(int *mat1, int *mat2,int m, int n, int p, int q)
 
     for(int i=0; i<m; i++)
         for(int j=0; j<n; j++)
-            *((mat1+i*m)+j) += *((mat1+i*m)+j);
+            *((mat1+i*m)+j) += *((mat2+i*m)+j);
 
     printMatrix(mat1,m,n);    
 }
