@@ -1,12 +1,10 @@
 #include <stdio.h>
 
-int* readMatrix(int* mat,int m, int n)
+void readMatrix(int* mat,int m, int n)
 {
     for(int i=0;i<m;i++)
         for(int j=0; j<n; j++)
             scanf("%d",(mat+i*m)+j);
-
-    return mat;        
 }
 
 void printMatrix(int *matPtr, int n, int m)
@@ -58,16 +56,16 @@ int main()
 
     printf("Enter first matrix \n");
 
-    int tmp1[m][n];
-    int *mat1 = readMatrix(*tmp1,m,n);
+    int mat1[m][n];
+    readMatrix(*mat1,m,n);
 
     printf("Enter dimensions of second matrix : ");
     scanf("%d %d",&p, &q);
 
     printf("Enter second matrix \n");
 
-    int tmp2[p][q];
-    int *mat2 = readMatrix(*tmp2,p,q);
+    int mat2[p][q];
+    readMatrix(*mat2,p,q);
 
-    return multiplyMatrix(mat1, mat2,m,n,p,q) + addMatrix(mat1, mat2,m,n,p,q);  
+    return multiplyMatrix(*mat1, *mat2,m,n,p,q) + addMatrix(*mat1, *mat2,m,n,p,q);  
 }
