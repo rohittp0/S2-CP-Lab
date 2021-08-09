@@ -19,6 +19,7 @@ int main()
 
     for (int i = 0; i < n; i++)
     {
+        int flag = 1;
         for (int j = 0; j < n - 1 - i; j++)
         {
             if (strcmp(names[j], names[j + 1]) > 0)
@@ -26,10 +27,16 @@ int main()
                 strcpy(temp, names[j]);
                 strcpy(names[j], names[j + 1]);
                 strcpy(names[j + 1], temp);
+                flag = 0;
             }
         }
+
+        if (flag)
+            break;
     }
 
     printf("\nSorted: \n");
     for (int i = 0; i < n; printf("%s\n", names[i++]));
+
+    return 0;
 }
