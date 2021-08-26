@@ -68,4 +68,6 @@ int main()
 
     printf("\nResult of binary search\nIterations : %d\nRank : %d", binary.iterations, binary.rank);
     printf("\nResult of linear search\nIterations : %d\nRank : %d\n", linear.iterations, linear.rank);
+
+    return 0;
 }

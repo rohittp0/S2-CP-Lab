@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define NUM_STUDENTS 5
+#define NUM_STUDENTS 15
 
 int main()
 {
